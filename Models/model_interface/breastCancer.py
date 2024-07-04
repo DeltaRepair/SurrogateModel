@@ -16,7 +16,7 @@ warnings.filterwarnings('ignore')
 import pandas as pd
 import numpy as np
 
-dataset = pd.read_csv('compass.csv')
+dataset = pd.read_csv('bc.csv')
 print('Shape before deleting duplicate values:', dataset.shape)
 
 # Removing duplicate rows if any
@@ -27,14 +27,14 @@ print('Shape After deleting duplicate values:', dataset.shape)
 # Start observing the Quantitative/Categorical/Qualitative variables
 dataset.head(10)
 
-target = dataset["two_year_recid"]
+target = dataset[""]
 train_dataset, test_dataset, y_train, y_test = train_test_split(dataset,
                                                                 target,
                                                                 test_size=0.2,
                                                                 random_state=0,
                                                                 stratify=target)
-x_train = train_dataset.drop('two_year_recid', axis=1)
-x_test = test_dataset.drop('two_year_recid', axis=1)
+x_train = train_dataset.drop('', axis=1)
+x_test = test_dataset.drop('', axis=1)
 
 numerical = ['priors_count']
 categorical = x_train.columns.difference(numerical)
