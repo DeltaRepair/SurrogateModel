@@ -10,6 +10,6 @@
 
 pip install -r requirements.txt
 
-## Generating Counterfactuals
+## Generating Models
 
 model_generator/driver.py
